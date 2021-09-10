@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
+    android:onClick="Exit"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
         android:fontFamily="@font/acme"
         android:text="FinanzasMT"
         android:textAlignment="center"
@@ -31,6 +32,7 @@
         android:id="@+id/button"
         android:layout_width="260dp"
         android:layout_height="80dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="@color/teal_200"
         android:fontFamily="@font/acme"
@@ -52,7 +54,7 @@
         android:id="@+id/button3"
         android:layout_width="260dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="@color/teal_200"
         android:fontFamily="@font/acme"
         android:text="editar mes"
@@ -64,8 +66,8 @@
         app:icon="@android:drawable/ic_menu_edit"
         app:iconSize="@android:dimen/app_icon_size"
         app:iconTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
@@ -73,6 +75,7 @@
         android:id="@+id/button2"
         android:layout_width="260dp"
         android:layout_height="80dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="@color/teal_200"
         android:fontFamily="@font/acme"
@@ -89,5 +92,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="Exit"
+        android:text="Salir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
