@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#47B14C"
-    android:onClick="Login"
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/titleTxt"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
@@ -23,7 +22,7 @@
         android:textColor="@color/white"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/emailTxtInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +30,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/emailTxtInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -44,13 +43,13 @@
         android:minHeight="48dp"
         android:text=""
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintBottom_toTopOf="@+id/passwordTxtInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/passwordTxtInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -62,42 +61,46 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toStartOf="@+id/emailTxtInput"
+        app:layout_constraintTop_toBottomOf="@+id/emailTxtInput" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#4611C5"
         android:fontFamily="@font/acme"
-        android:onClick="Login"
+        android:onClick="login"
         android:text="Login"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="@+id/button5"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
+        app:layout_constraintEnd_toEndOf="@+id/registerButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordTxtInput" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="250dp"
+        android:backgroundTint="#4611C5"
         android:fontFamily="@font/acme"
         android:text="Register"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/facebookImageButton"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginStart="64dp"
@@ -109,15 +112,15 @@
         android:paddingVertical="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/googleImageButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/facebook"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/TwitterImageButton"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginStart="32dp"
@@ -130,13 +133,13 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintStart_toEndOf="@+id/googleImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton"
         app:srcCompat="@drawable/twitter"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/googleImageButton"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginStart="32dp"
@@ -148,9 +151,9 @@
         android:paddingVertical="10dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintEnd_toStartOf="@+id/TwitterImageButton"
+        app:layout_constraintStart_toEndOf="@+id/facebookImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton"
         app:srcCompat="@drawable/google"
         tools:ignore="SpeakableTextPresentCheck" />
 
