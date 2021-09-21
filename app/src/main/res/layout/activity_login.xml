@@ -92,6 +92,7 @@
         android:layout_marginBottom="250dp"
         android:backgroundTint="#4611C5"
         android:fontFamily="@font/acme"
+        android:onClick="register"
         android:text="Register"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
