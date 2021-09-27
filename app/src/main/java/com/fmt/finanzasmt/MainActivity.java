@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void closeSession(View view){
+    public void closeSession(){
         Intent exit = new Intent(this, LoginActivity.class);
         startActivity(exit);
     }
